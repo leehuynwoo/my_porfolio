@@ -105,7 +105,7 @@ section#hello,
 select#about_me {
     height: 100vh;
     max-height: 1080px;
-    border: 2px solid red;
+
 }
 
 #hello {
@@ -124,19 +124,30 @@ select#about_me {
 
 
 /* 어바웃 미 */
-
-#about_me {
-    border: 2px solid red;
-}
-
 #about_me h1 {
     padding-top: 30px;
     margin: 0 auto;
     max-width: 1240px;
 }
 
-.avata_talk {
-    width: 100%;
+.speach_box,
+.speach_box::before,
+.avata_wrap {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 .speach_box {
@@ -152,8 +163,8 @@ select#about_me {
     align-items: center;
     justify-content: center;
     border-radius: 160px;
-    height: 200px;
-    max-width: 600px;
+    height: 160px;
+    max-width: 580px;
     background-color: #3B5E46;
     font-size: 32px;
     font-family: var(--font-gl);
@@ -183,46 +194,54 @@ select#about_me {
     height: 250px;
 }
 
+/* 인트로 박스 */
 .intro_detail_box {
+    width: 1200px;
     font-size: 20px;
-    padding-left: 5rem;
-    padding-right: 5rem;
     position: relative;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
     z-index: -2;
     display: flex;
-
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    row-gap: 28px;
-    column-gap: 28px; */
+    margin: 0 auto;
+    flex: 1;
 }
 
-.intro_detail_container {
-    width: 100%;
+.intro_detail_box .intro_detail_container {
     background: rgba(203, 219, 208, 0.4);
-    padding: 60px 0;
+    padding: 60px 20px;
     border-radius: 30px;
     font-family: var(--font-gm);
     font-size: 20px;
     color: var(--color-text);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .intro_detail_container:first-child {
-    margin-right: 28px;
-}
-
-.intro_detail_container:last-child {
-    flex-shrink: 1;
+    margin-right: 20px;
 }
 
 .resume {
     border-radius: 30px;
-    margin: 0 auto;
 }
 
-.detail_list:not(:last-child) {
-    margin-bottom: 7px;
+
+/* 이력내용 */
+
+.resume.info {
+    width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reseume__detail em {
+    display: inline-block;
+    text-align-last: justify;
+    width: 90px;
+    color: #808080;
 }
 
 .reseume__detail span {
@@ -237,22 +256,18 @@ select#about_me {
     margin-bottom: 15px;
 }
 
-.resume.info {
-    height: 100%;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.detail_list:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+/* 스킬내용 */
+.resume.ability {
+    max-width: 690px;
+    margin: 0 auto;
 }
 
 .reseume__detail.skills {
     margin-bottom: 25px;
-}
-
-
-.resume.ability {
-    max-width: 690px;
-    margin: 0 auto;
 }
 
 .skills_box {
@@ -262,12 +277,22 @@ select#about_me {
 }
 
 .about_sill {
+    color: #808080;
     max-width: 200px;
 }
 
+
+
+
+
+
+
+
+
+
+
 .skill_box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
 }
 
 .skill {
@@ -346,7 +371,7 @@ select#about_me {
 }
 
 .project__intro {
-    margin-top: 102px;
+    margin-top: 80px;
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
@@ -646,7 +671,7 @@ select#about_me {
 .utilized__img {
     display: flex;
     justify-content: space-between;
-    width: 100%;  
+    width: 100%;
 }
 
 .utilized__img img {

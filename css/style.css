@@ -1,0 +1,237 @@
+/* 폰트 */
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 공통 */
+:root {
+    --color-bg: #F0EEE8;
+    --color-bg-gr: linear-gradient(90deg, #F9F7F1 -0.99%, #FFEEF4 100%);
+    --cololr-pink: #F9E5E1;
+    --color-text: #313131;
+    --color-title: #4F865E;
+    --color-darkgreen: #3B5E46;
+    --color-trbox: rgba(203, 219, 208, 0.4);
+    --font-gm: 'GmarketSansMedium';
+    --font-gl: 'GmarketSansLight';
+    --font-gb: 'GmarketSansBold';
+    --size-24px: 24px;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1920px;
+    font-size: var(--font-gm);
+    font-size: var(--size-24px);
+    margin: 0 auto;
+}
+
+/* 섹션 타이틀 폰트 */
+.section_tit {
+    margin-top: 70px;
+    font-family: var(--font-gb);
+    color: var(--color-title);
+    font-size: 72px;
+}
+
+
+/* 헤더 */
+.header__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    right: 0;
+}
+
+.header__container .menu {
+    position: relative;
+    margin-right: 32px;
+    font-size: 16px;
+    font-family: var(--font-gl);
+}
+
+.header__container .menu:not(:last-child)::before {
+    margin-right: 0;
+}
+
+
+.header__container .menu:not(:last-child)::before {
+    position: absolute;
+    content: '  |';
+    right: -16px;
+}
+
+/* 인트로 섹션 */
+section#hello,
+select#about_me {
+    height: 100vh;
+    max-height: 1080px;
+}
+
+#hello {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+#hello .section_tit {
+    margin-top: 320px;
+    color: var(--color-text);
+}
+
+#hello .section_tit p {
+    color: #396C47;
+}
+
+
+/* 어바웃 미 */
+#about_me h1 {
+    padding-top: 70px;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.avata_talk {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.speach_box {
+    margin-top: 80px;
+    width: inherit;
+    position: relative;
+}
+
+.speach {
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 160px;
+    height: 200px;
+    max-width: 600px;
+    background-color: #3B5E46;
+    font-size: 32px;
+    font-family: var(--font-gl);
+    color: var(--cololr-pink);
+}
+
+.speach::before {
+    bottom: -50px;
+    content: url("/img/tag.svg");
+}
+
+.speach span {
+    font-family: var(--font-gm);
+}
+
+.avata_wrap{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.avata {
+    width: 290px;
+    height: 290px;
+}
+
+.intro_detail_box {
+    max-width: 1820px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    column-gap: 28px;
+}
+
+.intro_detail_container {
+    width: 100%;
+    background: rgba(203, 219, 208, 0.4);
+    padding: 60px 0;
+}
+
+.resume {
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.reseume__detail {
+    margin-bottom: 18px;
+}
+
+.reseume__detail:last-child{
+    margin-bottom: 0;
+}
+
+.resume.info {
+    height: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reseume__detail.skills {
+    margin-bottom: 25px;
+}
+
+
+.resume.ability {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.skills_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill__wrap {
+    max-width: 780px;
+}
+
+.about_sill {max-width: 200px;}
+
+.skill_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    background-color: #FFF6F4;
+    border: 10px solid var(--color-bg);
+    border-radius: 50%;
+    font-size: 19px;
+    margin-right: 40px;
+}
+
+.skill:last-child {
+    margin-right: 0;
+}

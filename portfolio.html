@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이 포트폴리오</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
+
 <body>
     <div class="wrap">
         <header class="header">
             <ul class="header__container">
-                <li class="menu_about">About Me</li>
-                <li class="menu_mywork">My Work</li>
-                <li class="menu_contact">Contact </li>
+                <li class="menu">About Me</li>
+                <li class="menu">My Work</li>
+                <li class="menu">Contact </li>
             </ul>
         </header>
         <section id="hello">
             <h1 class="section_tit">
-                안녕하세요.<br>
-                신입 웹퍼블리셔 <span>'</span>이현우<span>'</span>를<br>
-                소개합니다.<br>
-            </h1> 
+                안녕하세요.
+                <p>신입 웹퍼블리셔 '이현우'를</p>
+                소개합니다.
+            </h1>
         </section>
         <section id="about_me">
             <h1 class="section_tit">
                 About Me
             </h1>
             <div class="intro">
-                <div class="speach box">
-                    <div class="speach">
-                        배움이 즐겁고 도전이 재미있는<br>
-                        웹 퍼블리셔  “이현우” 입니다.
+                <div class="avata_talk">
+                    <div class="speach_box">
+                        <div class="speach">
+                            <div class="speach__text">
+                                <span>배움</span>이 즐겁고 <span>도전</span>이 재미있는<br>
+                                <span>웹 퍼블리셔 “이현우”</span> 입니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avata_wrap">
+                        <img src="img/avata.png" alt="avata" class="avata">
                     </div>
                 </div>
-                <img src="" alt="avart">
                 <div class="intro_detail_box">
                     <div class="intro_detail_container">
-                        <ul class="resume">
-                            <li class="reseume__detail">생년월일 |  1991.12.11</li>
-                            <li class="reseume__detail">최종학력 |  부산대학교 간호대학원 석사 졸업(2017)</li>
+                        <ul class="resume info">
+                            <li class="reseume__detail">생년월일 | 1991.12.11</li>
+                            <li class="reseume__detail">최종학력 | 부산대학교 간호대학원 석사 졸업(2017)</li>
                             <li class="reseume__detail">자격증 | 간호사면허 (2013)</li>
-                            <li class="reseume__detail"><span>자격증 |  </span>사회조사분석사 (2016)</li>
-                            <li class="reseume__detail"><span>자격증 |  </span>GTQi(2021) GTQ(2022)</li>
+                            <li class="reseume__detail"><span>자격증 | </span>사회조사분석사 (2016)</li>
+                            <li class="reseume__detail"><span>자격증 | </span>GTQi(2021) GTQ(2022)</li>
                         </ul>
-                        <ul class="resume">
-                            <li class="reseume__detail skills">
-                                <div class="skills_box">
-                                    <div class="about_sill">퍼블리싱 스킬 |</div>
-                                    <div class="skill_box">
-                                        <div class="skill">HTML</div>
-                                        <div class="skill">CSS</div>
-                                        <div class="skill">Js</div>
-                                        <div class="skill">jQuery</div>
+                    </div>
+                    <div class="intro_detail_container">
+                        <ul class="resume ability">
+                            <li class="skill__wrap">
+                                <div class="reseume__detail skills">
+                                    <div class="skills_box">
+                                        <div class="about_sill">퍼블리싱 스킬 |</div>
+                                        <div class="skill_box">
+                                            <div class="skill">HTML</div>
+                                            <div class="skill">CSS</div>
+                                            <div class="skill">Js</div>
+                                            <div class="skill">jQuery</div>
+                                        </div>
                                     </div>
                                 </div>
-                                </li>
-                            <li class="reseume__detail skills">
-                                <div class="skills_box">
-                                    <div class="about_sill">디자인 툴 |</div>
-                                    <div class="skill_box">
-                                        <div class="skill">Figma</div>
-                                        <div class="skill">Ps</div>
-                                        <div class="skill">Ai</div>
-                                        <div class="skill">Xd</div>
+                                <div class="reseume__detail skills">
+                                    <div class="skills_box">
+                                        <div class="about_sill">디자인 툴 |</div>
+                                        <div class="skill_box">
+                                            <div class="skill">Figma</div>
+                                            <div class="skill">Ps</div>
+                                            <div class="skill">Ai</div>
+                                            <div class="skill">Xd</div>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -70,7 +84,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>  
+            </div>
         </section>
         <section id="my_work">
             <h1 class="section_tit">
@@ -79,11 +93,11 @@
             <main class="project">
                 <div class="project__intro">
                     <div class="np__box">
-                        <h2 class="project__np">RED HEAL (4주)</div>
-                        <h2 class="project__np">기획 | 디자인 | 퍼블리싱 100% 개인작품 </div>
+                        <h2 class="project__np">RED HEAL (4주)
                     </div>
-                    <a href="#"><button class="go_site">사이트 보러가기</button></a>
-                </div> 
+                    <h2 class="project__np">기획 | 디자인 | 퍼블리싱 100% 개인작품
+                </div>
+                <a href="#"><button class="go_site">사이트 보러가기</button></a>
                 <div class="overview__box">
                     <div class="overview">overview</div>
                     <p class="overview__intro">
@@ -134,71 +148,30 @@
                         </ul>
                     </div>
                 </div>
-<!-- 컬러앤무드 -->
-<div class="design">
-                    <div class="index">디자인 컨셉 |</div>
-                    <div class="design__cm">
-                        <ul class="chips">
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">#DC272D</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">#FFEEF4</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">#009BDE</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">#EEF8FF</div>
-                            </li>
-                        </ul>
-                        <ul class="chips">
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">energy</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">happiness</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">#009BDE</div>
-                            </li>
-                            <li class="chip">
-                                <div class="circle"></div>
-                                <div class="circle__name">dynamic</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 컬러앤무드 -->
-                    <div class="typography">TYPOGRAPH</div>
-                    <div class="typo__boxs">
-                        <div class="typo__box">
-                            <div class="lang">영문</div>
-                            <div class="font">Rockwell Extra</div>
-                            <div class="font_examples">
-                                <div class="font example">ABCDEFGHIJKLMNOP</div>
-                                <div class="font example">abcdefghijklmnoph</div>
-                            </div>
-                        </div>
-                        <div class="typo__box">
-                            <div class="lang">한글</div>
-                            <div class="font">IBM Plex Sans KR</div>
-                            <div class="font_examples">
-                                <div class="font example">가나다라마바사아자차카타파하</div>
-                                <div class="font example">가나다라마바사아자차카타파하</div>
-                                <div class="font example">가나다라마바사아자차카타파하</div>
-                            </div>
+                <!-- 컬러앤무드 -->
+                <div class="typography">TYPOGRAPH</div>
+                "<div class="typo__boxs">
+                    <div class="typo__box">
+                        <div class="lang">영문</div>
+                        <div class="font">Rockwell Extra</div>
+                        <div class="font_examples">
+                            <div class="font example">ABCDEFGHIJKLMNOP</div>
+                            <div class="font example">abcdefghijklmnoph</div>
                         </div>
                     </div>
-
+                    <div class="typo__box">
+                        <div class="lang">한글</div>
+                        <div class="font">IBM Plex Sans KR</div>
+                        <div class="font_examples">
+                            <div class="font example">가나다라마바사아자차카타파하</div>
+                            <div class="font example">가나다라마바사아자차카타파하</div>
+                            <div class="font example">가나다라마바사아자차카타파하</div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </section>
     </div>
 </body>
+
 </html>

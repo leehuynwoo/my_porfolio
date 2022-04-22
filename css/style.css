@@ -234,7 +234,7 @@ section#about_me {
 
 
 #about_me h1 {
-    padding-top: 80px;
+    padding-top: 50px;
     margin: 0 auto;
     max-width: 1240px;
 }
@@ -261,7 +261,7 @@ section#about_me {
 
 .speach_box {
     z-index: 1;
-    margin-top: 100px;
+    margin-top: 80px;
     width: inherit;
     position: relative;
 }
@@ -308,7 +308,7 @@ section#about_me {
     width: 1200px;
     font-size: 20px;
     position: relative;
-    transform: translateY(-10%);
+    transform: translateY(-20%);
     z-index: -2;
     display: flex;
     margin: 0 auto;

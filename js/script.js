@@ -40,3 +40,11 @@ window.onload = function () {
         });
     });
 }
+
+// p태그 없애기
+function remove() {
+    var windowWidth = $(window).window();
+    if ($(window).window() < 1200) {
+        $('.br_remove').replaceWith('');
+    }
+}

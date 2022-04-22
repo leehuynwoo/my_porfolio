@@ -111,12 +111,38 @@ section#about_me {
 #hello {
     margin: 0 auto;
     max-width: 1240px;
+    position: relative;
+}
+
+#hello::after{
+    left: 50%;
+    bottom: 30px;
+    width: 60px;
+    height: 170px;
+    position: absolute;
+    content: url(/img/mouse_down.svg);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 #hello .section_tit {
     padding-top: 320px;
     color: var(--color-text);
 }
+
 
 #hello .section_tit p {
     color: #396C47;
@@ -787,9 +813,22 @@ section#about_me {
 
 
 /* 푸터 */
-footer {
-    margin: 0 auto;
-    max-width: 1240px;
+#footer {
+    background: rgba(249, 229, 225, 0.5);
+    font-family: var(--font-gl);
+    width: 100%;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer_ineer {
+    max-width: 1240px;
+    width: 100%;
+}
+
+.footer_ineer p {
+    line-height: 120px;
+    text-align: center;
 }

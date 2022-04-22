@@ -48,6 +48,7 @@
 
 body {
     background: var(--color-bg-gr);
+    overflow: auto;
 }
 
 .mb10 {
@@ -102,10 +103,9 @@ body {
 
 /* 인트로 섹션 */
 section#hello,
-select#about_me {
+section#about_me {
     height: 100vh;
     max-height: 1080px;
-
 }
 
 #hello {
@@ -114,7 +114,7 @@ select#about_me {
 }
 
 #hello .section_tit {
-    margin-top: 320px;
+    padding-top: 320px;
     color: var(--color-text);
 }
 
@@ -124,8 +124,91 @@ select#about_me {
 
 
 /* 어바웃 미 */
+#about_me {
+    /* background: linear-gradient(90deg, rgba(249,242,224,1) 0%, rgba(255,238,244,1) 100%); */
+}
+
+.background_figures {
+    position: relative;
+    width: 100%;
+}
+
+.background_figures>div {
+    border-radius: 50%;
+    z-index: -9999;
+    position: absolute;
+}
+
+.a:nth-child(1) {
+    /* 살구색 */
+    background: linear-gradient(351deg, rgba(242, 250, 251, 1) 20%, rgba(251, 180, 133, 1) 100%);
+    width: 220px;
+    height: 220px;
+    filter: blur(5px);
+    transform: rotate(179.95deg);
+    box-shadow: 0px 46px 46px rgba(0, 0, 0, 0.02);
+    left: 86px;
+    top: 396px;
+}
+
+.a:nth-child(2) {
+    /* 큰 주황색 */
+    background: linear-gradient(45deg, #F79500 10%, #F2FAFB 100%);
+    width: 242px;
+    height: 242px;
+    filter: blur(12px);
+    transform: rotate(129.95deg);
+    right: 125px;
+    top: 570px;
+}
+
+.a:nth-child(3) {
+    /* 큰 파란색 */
+    background: linear-gradient(351deg, rgba(190, 225, 230, 1) 10%, rgba(242, 250, 251, 1) 100%);
+    width: 350px;
+    height: 350px;
+    filter: blur(34px);
+    transform: rotate(169.63deg);
+    right: 133px;
+    top: 35px;
+}
+
+.a:nth-child(4) {
+    /* 빨간색 */
+    background: linear-gradient(10deg, #FF92A2 5%, #F2FAFB 100%);
+    width: 112px;
+    height: 112px;
+    filter: blur(2px);
+    left: 450px;
+    top: 794px;
+}
+
+.a:nth-child(5) {
+    /* 작은 파란색 */
+    background: linear-gradient(229deg, rgba(190, 225, 230, 1) 10%, rgba(242, 250, 251, 1) 100%);
+    width: 58px;
+    height: 58px;
+    filter: blur(4px);
+    box-shadow: 0px 46px 46px rgba(0, 0, 0, 0.05);
+    right: 644px;
+    top: 446px;
+}
+
+.a:nth-child(6) {
+    /* 작은 주황색 */
+    background: linear-gradient(300deg, #fff 0%,#F79500 20%, #F2FAFB 100%);
+    width: 150px;
+    height: 150px;
+    filter: blur(5px);
+    left: 383px;
+    top: 169px;
+}
+
+
+
+
 #about_me h1 {
-    padding-top: 30px;
+    padding-top: 80px;
     margin: 0 auto;
     max-width: 1240px;
 }
@@ -152,7 +235,7 @@ select#about_me {
 
 .speach_box {
     z-index: 1;
-    margin-top: 30px;
+    margin-top: 100px;
     width: inherit;
     position: relative;
 }
@@ -207,7 +290,7 @@ select#about_me {
 }
 
 .intro_detail_box .intro_detail_container {
-    background: rgba(203, 219, 208, 0.4);
+    background: linear-gradient(100.83deg, rgba(203, 219, 208, 0.24) 32.86%, rgba(43, 150, 77, 0) 95.83%);
     padding: 60px 20px;
     border-radius: 30px;
     font-family: var(--font-gm);
@@ -364,6 +447,7 @@ select#about_me {
 /* 프로젝트 */
 
 #my_work {
+    padding-top: 40px;
     font-family: var(--font-gm);
     width: 1240px;
     margin: 0 auto;
@@ -399,6 +483,7 @@ select#about_me {
 }
 
 .overview__intro {
+    line-height: 30px;
     font-family: var(--font-gl);
     margin-bottom: 50px;
 }
@@ -567,7 +652,7 @@ select#about_me {
 
 /* 타이포 */
 .typography {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 20px;
 }
 
@@ -606,7 +691,7 @@ select#about_me {
 .typo__boxs {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .typo__box {
@@ -628,7 +713,8 @@ select#about_me {
 .page_descriptions__list {
     font-family: var(--font-gl);
     display: flex;
-    margin-bottom: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .page_descriptions__list li:not(:last-child) {
@@ -642,6 +728,7 @@ select#about_me {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .page_titl_container {
@@ -650,17 +737,27 @@ select#about_me {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-.page_titl_container::before {
+.page_titl_wrap::before,
+.page_titl_wrap::after
+{
+    content: '';
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
+    width: 35%;
     height: 2px;
     background-color: var(--color-darkgreen);
 }
+
+.page_titl_wrap::before{
+    left: 0;
+}
+.page_titl_wrap::after {
+    right: 0;
+}
+
+
 
 .page .main_img {
     max-width: 1240px;

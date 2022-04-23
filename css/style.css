@@ -47,7 +47,7 @@
 
 html,
 body {
-    background-color: #DC272D;
+    background: var(--color-bg-gr);
     width: 100%;
     height: 100%;
     padding: 0;
@@ -845,23 +845,29 @@ section#about_me {
     width: 100%;
     max-width: 1920px;
     padding-top: 40px;
-    background: rgba(249, 229, 225, 0.5);
+    background: linear-gradient(0deg, rgba(250, 209, 191, 0.31) 4.04%, rgba(250, 209, 191, 0) 100%);
     font-family: var(--font-gl);
     width: 100%;
     padding-bottom: 20px;
+    overflow: hidden;
 }
 
 .footer_ineer {
-    width: 100%;
+    display: block;
     max-width: 1240px;
-    margin: 0 auto;
+    min-width: 100%
+}
+
+.section_tit {
+    max-width: 400px;
+    display: inline-block;
 }
 
 .footer_ineer p {
+    max-width: 100%;
     line-height: 120px;
     text-align: center;
 }
-
 
 
 /* 반응형 */
@@ -1012,20 +1018,19 @@ section#about_me {
     .footer_ineer {
         padding: 0 40px;
     }
-#my_work {
-    height: 100%;
-}
 
-.footer_ineer {
-    width: 100%;
-}
+    #my_work {
+        height: 100%;
+    }
+
+    .footer_ineer {
+        width: 100%;
+    }
 
 }
 
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-@media all and (min-width:768px) and (max-width:1023px) {
-    ...
-}
+@media all and (min-width:768px) and (max-width:1023px) {}
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width:480px) and (max-width:767px) {

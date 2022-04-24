@@ -241,8 +241,6 @@ section#about_me {
 }
 
 
-
-
 #about_me h1 {
     padding-top: 50px;
     margin: 0 auto;
@@ -347,6 +345,10 @@ section#about_me {
 
 /* 이력내용 */
 
+.reseume__detail {
+    display: flex;
+}
+
 .resume.info {
     width: 420px;
     height: 100%;
@@ -355,38 +357,24 @@ section#about_me {
     justify-content: space-between;
 }
 
-.reseume__detail em {
+.resume__category {
     display: inline-block;
     text-align-last: justify;
     width: 90px;
     color: #808080;
 }
 
-.reseume__detail span {
-    visibility: hidden;
+.resume__category.about_sill {}
+
+.intro__inner {
+    flex-direction: column;
 }
 
-.reseume__detail:last-child {
-    margin-bottom: 0;
+.resume__data__box>div:not(:last-child) {
+    margin-bottom: 8px;
 }
 
-.certificate {
-    margin-bottom: 15px;
-}
 
-.detail_list:not(:last-child) {
-    margin-bottom: 12px;
-}
-
-/* 스킬내용 */
-.resume.ability {
-    max-width: 690px;
-    margin: 0 auto;
-}
-
-.reseume__detail.skills {
-    margin-bottom: 25px;
-}
 
 .skills_box {
     display: flex;
@@ -394,23 +382,18 @@ section#about_me {
     align-items: center;
 }
 
-.about_sill {
-    color: #808080;
-    max-width: 200px;
+/* 동그라미 스킬 가로정렬 */
+.resume.ability .resume__data__box {
+    flex-direction: row;
+    display: flex;
 }
 
+.skill_box.tools {
+    margin-bottom: 25px;
+}
 
-
-
-
-
-
-
-
-
-
-.skill_box {
-    display: flex;
+.resume.ability .reseume__detail:not(:last-child) {
+    margin-bottom: 25px;
 }
 
 .skill {
@@ -837,7 +820,7 @@ section#about_me {
     line-height: 25px;
 }
 
-.utilized__img { 
+.utilized__img {
     margin-top: 20px;
 }
 
@@ -869,12 +852,26 @@ section#about_me {
     display: block;
 }
 
-.footer_ineer p {
-    max-width: 100%;
-    line-height: 120px;
-    text-align: center;
+.contact_info {
+    margin-top: 80px;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
 }
 
+.contact_info p {
+    position: relative;
+}
+
+.contact_info p:not(:last-child):after{
+    position: absolute;
+    content: '';
+    right: -50%;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-text);
+}
 
 
 
@@ -893,6 +890,10 @@ section#about_me {
 
     #hello::after {
         top: 720px;
+    }
+
+    .intro_detail_container.info .intro__inner {
+        width: 470px;
     }
 
     .np__box {
@@ -1000,6 +1001,10 @@ section#about_me {
         transform: translateY(-9%);
     }
 
+    .intro_detail_container.info .intro__inner {
+        width: 470px;
+    }
+
     .intro_detail_container:not(:first-child) {
         order: -1;
         margin-left: 0;
@@ -1044,7 +1049,7 @@ section#about_me {
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-@media all and (min-width:480px) and (max-width:767px) {
+@media all and (max-width:767px) {
     .wrap {
         padding: 0 20px;
     }
@@ -1177,35 +1182,95 @@ section#about_me {
 margin-bottom: 10px;} */
 
 
-.font_info,
-font {
-    font-size: 20px;
+    .font_info,
+    font {
+        font-size: 20px;
+    }
+
+    .typo__box.kr {
+        margin-top: 20px;
+    }
+
+    .font_info {
+        font-size: 18px !important;
+    }
+
+    .font_example {
+        font-size: 18px !important;
+    }
+
+    .page_titl_wrap::before,
+    .page_titl_wrap::after {
+        width: 18%;
+    }
+
+    .utilized__box {
+        font-size: 18px !important;
+    }
+
+    .page_titl_wrap,
+    .page .page_img {
+        margin-bottom: 28px;
+    }
+
 }
 
-.typo__box.kr {
-    margin-top: 20px;
-}
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width:480px) {
+    #about_me {
+        max-height: unset !important;
+    }
 
-.font_info {
-    font-size: 18px !important;
-}
+    
+    #intro_detail_box {
+        height: 100%;
+    }
 
-.font_example {
-    font-size: 18px !important;
-}
+    .speach {
+        margin-left: -15px;
+    }
 
-.page_titl_wrap::before,
-.page_titl_wrap::after {
-    width: 18%;
-}
+    .avata_wrap img {
+        width: 130px;
+        height: 130px;
+    }
 
-.utilized__box {
-    font-size: 18px !important;
-}
+    .reseume__detail {
+        flex-direction: column;
+    }
 
-.page_titl_wrap,
-.page .page_img {
-    margin-bottom: 28px;
-}
+    .intro_detail_container:nth-child(1),
+    .intro_detail_container:nth-child(2) {
+        padding: 50px 25px;
+    }
+
+    .resume.info {
+        width: 100%;
+    }
+
+    .resume__data__box {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .resume__data:nth-child(1) {
+        margin-bottom: 15px;
+    }
+
+    .resume__data.skill:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .resume__category {
+        margin-bottom: 15px;
+    }
+
+    .intro_detail_box {
+        transform: translateY(-5%);
+    }
+
+    .project__intro {
+        margin-top: 40px;
+    }
 
 }

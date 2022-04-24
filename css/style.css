@@ -159,6 +159,10 @@ section#about_me {
 
 
 /* 어바웃 미 */
+#about_me .section_tit {
+    display: flex;
+}
+
 
 .background_figures {
     position: relative;
@@ -830,9 +834,10 @@ section#about_me {
 
 .utilized__box .utilized__skill {
     margin-bottom: 50px;
+    line-height: 25px;
 }
 
-.utilized__img {
+.utilized__img { 
     margin-top: 20px;
 }
 
@@ -859,8 +864,9 @@ section#about_me {
 }
 
 .section_tit {
-    max-width: 400px;
-    display: inline-block;
+    margin: 0 auto;
+    max-width: 1240px;
+    display: block;
 }
 
 .footer_ineer p {
@@ -868,6 +874,8 @@ section#about_me {
     line-height: 120px;
     text-align: center;
 }
+
+
 
 
 /* 반응형 */
@@ -885,72 +893,6 @@ section#about_me {
 
     #hello::after {
         top: 720px;
-    }
-
-    section#about_me {
-        height: auto;
-    }
-
-    .speach_box {
-        margin-top: 30px;
-        left: -9%;
-    }
-
-    .speach__text {
-        font-size: 24px;
-    }
-
-    .avata_wrap>img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .intro_detail_box {
-        z-index: -1;
-        width: 100%;
-        flex-direction: column;
-        transform: translateY(-9%);
-    }
-
-    .intro_detail_container:not(:first-child) {
-        order: -1;
-        margin-left: 0;
-        padding: 35px 40px;
-    }
-
-    .intro_detail_container:nth-child(1) {
-        margin-top: 10px;
-        padding: 35px 60px;
-    }
-
-    .resume.info li {
-        margin-bottom: 13px;
-    }
-
-    .detail_list:not(:last-child) {
-        margin-bottom: 4px;
-    }
-
-    .reseume__detail,
-    .about_sill {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .skill {
-        height: 60px;
-        width: 60px;
-        font-size: 13px;
-    }
-
-    .project {
-        width: 100%;
-    }
-
-    .project__intro {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .np__box {
@@ -1030,9 +972,240 @@ section#about_me {
 }
 
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
-@media all and (min-width:768px) and (max-width:1023px) {}
+@media all and (min-width:768px) and (max-width:1023px) {
+
+    /* 어바웃미 */
+    section#about_me {
+        height: auto;
+    }
+
+    .speach_box {
+        margin-top: 30px;
+        left: -9%;
+    }
+
+    .speach__text {
+        font-size: 24px;
+    }
+
+    .avata_wrap>img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .intro_detail_box {
+        z-index: -1;
+        width: 100%;
+        flex-direction: column;
+        transform: translateY(-9%);
+    }
+
+    .intro_detail_container:not(:first-child) {
+        order: -1;
+        margin-left: 0;
+        padding: 35px 40px;
+    }
+
+    .intro_detail_container:nth-child(1) {
+        margin-top: 10px;
+        padding: 35px 60px;
+    }
+
+    .resume.info li {
+        margin-bottom: 13px;
+    }
+
+    .detail_list:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    .reseume__detail,
+    .about_sill {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .skill {
+        height: 60px;
+        width: 60px;
+        font-size: 13px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project__intro {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width:480px) and (max-width:767px) {
-    ...
+    .wrap {
+        padding: 0 20px;
+    }
+
+    #hello::after {
+        top: 520px;
+        width: 40px;
+        height: 150px;
+    }
+
+    /* 소개 */
+    .section_tit {
+        font-size: 32px;
+    }
+
+    #about_me {
+        height: 100% !important;
+    }
+
+    .a:nth-child(2) {
+        left: 400px;
+    }
+
+    .a:nth-child(4) {
+        left: 320px;
+    }
+
+    .speach {
+        margin-left: 25%;
+        height: 100px;
+        width: 310px;
+    }
+
+    .speach__text {
+        font-size: 18px;
+    }
+
+    .speach_box {
+        margin-top: 40px;
+    }
+
+    .speach_box::before {
+        width: 50px;
+        bottom: -41px;
+    }
+
+    .avata_wrap {
+        padding-left: 80px;
+    }
+
+    .avata_wrap img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .intro_detail_box {
+        z-index: -1;
+        width: 100%;
+        flex-direction: column;
+        transform: translateY(-9%);
+    }
+
+    .intro_detail_container:not(:first-child) {
+        order: -1;
+        margin-left: 0;
+        padding: 35px 40px;
+    }
+
+    .intro_detail_container:nth-child(1) {
+        margin-top: 10px;
+        padding: 35px 60px;
+    }
+
+    .resume.info li {
+        margin-bottom: 13px;
+    }
+
+    .detail_list:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    .reseume__detail,
+    .about_sill {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .skill {
+        height: 60px;
+        width: 60px;
+        font-size: 13px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project__intro {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 프로젝트 */
+    .np__box {
+        font-size: 24px;
+    }
+
+    .go_site {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .dessing__cm__contaimer,
+    .typography {
+        margin-top: 40px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* .dessing__cm__contaimer.moodstyle .circle__name{
+margin-bottom: 10px;} */
+
+
+.font_info,
+font {
+    font-size: 20px;
+}
+
+.typo__box.kr {
+    margin-top: 20px;
+}
+
+.font_info {
+    font-size: 18px !important;
+}
+
+.font_example {
+    font-size: 18px !important;
+}
+
+.page_titl_wrap::before,
+.page_titl_wrap::after {
+    width: 18%;
+}
+
+.utilized__box {
+    font-size: 18px !important;
+}
+
+.page_titl_wrap,
+.page .page_img {
+    margin-bottom: 28px;
+}
+
 }

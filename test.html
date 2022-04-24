@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <div class="typography">TYPOGRAPH</div>
+    <div class="typo__boxs">
+        <div class="typo__box eng">
+            <div class="font_info ">
+                <div class="lang mb10">
+                    영문
+                </div>
+                <div class="font">Rockwell Extra</div>
+            </div>
+            <div class="font_examples">
+                <div class="font_example mb10">ABCDEFGHIJKLMNOP</div>
+                <div class="font_example">abcdefghijklmnoph</div>
+            </div>
+        </div>
+        <div class="typo__box kr">
+            <div class="font_info" style="margin-left: 15px;">
+                <div class="lang mb10">
+                    한글
+                </div>
+                <div class="font">IBM Plex Sans KR</div>
+            </div>
+            <div class="font_examples adj">
+                <div class="font_example mb10" id="font_adj" style="font-weight: 300 !important;">가나다라마바사아자차카타파하
+                </div>
+                <div class="font_example mb10" id="font_adj">가나다라마바사아자차카타파하</div>
+                <div class="font_example" id="font_adj">가나다라마바사아자차카타파하</div>
+            </div>
+        </div>
+    </div>
+    <div id="nameeee">
+        <div id="div-element">Hey there!!</div>
+        <div id="div-element">Hey there!!</div>
+    </div>
+
+
+    <!-- 타이포그래피 -->
+    <script>
+        $(document).ready(function () {
+            function checkWidth() {
+                let fontKR = $('.font_examples.adj .font_example')
+                let windowSize = $(window).width();
+                if (windowSize == 479) {
+                    fontKR.text("안녕하세요");
+                }
+                console.log(fontKR.text());
+            }
+            checkWidth();
+            $(window).resize(checkWidth);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = function () {
     var elm = ".box";
     $(elm).each(function (index) {
@@ -41,10 +43,18 @@ window.onload = function () {
     });
 }
 
-// p태그 없애기
-function remove() {
-    var windowWidth = $(window).window();
-    if ($(window).window() < 1200) {
-        $('.br_remove').replaceWith('');
+
+$(document).ready(function () {
+    function checkWidth() {
+        let fontKR = $('.font_examples.adj .font_example');
+        let pageMenu = $('.page_descriptions__list li');
+        let windowSize = $(window).width();
+        if (windowSize <= 480) {
+            fontKR.text("가나다라마바사아자차");
+            console.log(pageMenu);
+            pageMenu.remove();
+        }
     }
-}
+    checkWidth();
+    $(window).resize(checkWidth);
+});

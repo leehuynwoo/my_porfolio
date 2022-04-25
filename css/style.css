@@ -860,11 +860,7 @@ section#about_me {
     margin-bottom: 40px;
 }
 
-.contact_info p {
-    position: relative;
-}
-
-.contact_info p:not(:last-child):after{
+.contact_info p:not(:last-child):after {
     position: absolute;
     content: '';
     right: -50%;
@@ -882,10 +878,6 @@ section#about_me {
         padding: 0 40px;
         margin: 0;
         overflow: hidden;
-    }
-
-    #hello {
-        border: 1px solid red;
     }
 
     #hello::after {
@@ -908,6 +900,11 @@ section#about_me {
     .overview__intro {
         max-width: 100%;
         font-size: 20px;
+    }
+
+    .speach {
+        height: 120px;
+        max-width: 500px;
     }
 
     .typography {
@@ -969,6 +966,12 @@ section#about_me {
     .footer_ineer {
         width: 100%;
     }
+
+    .contact_info {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
 
 }
 
@@ -1174,8 +1177,8 @@ section#about_me {
     }
 
     .circle {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
 
     /* .dessing__cm__contaimer.moodstyle .circle__name{
@@ -1221,7 +1224,7 @@ margin-bottom: 10px;} */
         max-height: unset !important;
     }
 
-    
+
     #intro_detail_box {
         height: 100%;
     }
@@ -1272,5 +1275,14 @@ margin-bottom: 10px;} */
     .project__intro {
         margin-top: 40px;
     }
+
+    /* .contact_info {
+        justify-content: flex-start !important;
+    }
+
+    .contact_info p {
+        text-align-last: left;
+    } */
+
 
 }

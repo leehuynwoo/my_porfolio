@@ -125,7 +125,8 @@ section#about_me {
 
 #hello::after {
     left: 50%;
-    bottom: 30px;
+    transform: translate(-50%);
+    top: 70%;
     width: 60px;
     height: 170px;
     position: absolute;
@@ -364,8 +365,6 @@ section#about_me {
     color: #808080;
 }
 
-.resume__category.about_sill {}
-
 .intro__inner {
     flex-direction: column;
 }
@@ -383,6 +382,19 @@ section#about_me {
 }
 
 /* 동그라미 스킬 가로정렬 */
+
+.resume__dtat__set {
+    display: flex;
+}
+
+.resume__dtat__set>div:last-child {
+    margin-right: 20px;
+}
+
+.resume__dtat__set:last-child>div:last-child {
+    margin-right: 0;
+}
+
 .resume.ability .resume__data__box {
     flex-direction: row;
     display: flex;
@@ -392,11 +404,12 @@ section#about_me {
     margin-bottom: 25px;
 }
 
-.reseume__detail:first-child{
+.skill_box.design .reseume__detail:first-child {
     margin-bottom: 25px;
 }
 
-.skill {
+.resume__data.skill,
+.resume__data.tool {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -413,51 +426,47 @@ section#about_me {
     border: 10px solid transparent;
 }
 
-.skill:last-child {
-    margin-right: 0;
-}
-
 /* linear-gradient : content background */
 /* 퍼블리싱 스킬 */
-.skill:nth-child(1) {
+.resume__data.a1 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(255, 224, 210, 0.6), rgba(233, 98, 40, 0.6) 100%);
 }
 
-.skill:nth-child(2) {
+.resume__data.b1 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(181, 200, 245, 0.6), rgba(40, 98, 233, 0.6) 100%);
 }
 
-.skill:nth-child(3) {
+.resume__data.c1 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(249, 239, 164, 0.6), rgba(239, 216, 29, 0.6) 100%);
 }
 
-.skill:nth-child(4) {
+.resume__data.d1 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(189, 222, 244, 0.6) 0%, rgba(7, 105, 173, 0.6) 100%);
 }
 
 /* 디자인 툴 */
-.skill_box.tools .skill:nth-child(1) {
+.resume__data.a2 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(255, 213, 208, 0.6) 0%, rgba(247, 110, 95, 0.6) 54%, rgba(10, 201, 127, 0.6) 100%);
 }
 
-.skill_box.tools .skill:nth-child(2) {
+.resume__data.b2 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(200, 219, 234, 0.6) 0%, rgba(47, 163, 247, 0.6) 100%);
 
 }
 
-.skill_box.tools .skill:nth-child(3) {
+.resume__data.c2 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(232, 193, 141, 0.6) 0%, rgba(247, 149, 0, 0.6) 100%);
 
 }
 
-.skill_box.tools .skill:nth-child(4) {
+.resume__data.d2 {
     background-image: linear-gradient(#FFF6F4, #FFF6F4),
         linear-gradient(to bottom, rgba(245, 181, 181, 0.6) 0%, rgba(246, 94, 237, 0.6) 100%);
 }
@@ -880,8 +889,13 @@ section#about_me {
         overflow: hidden;
     }
 
+    section#hello,
+    section#about_me {
+        max-height: unset;
+    }
+
     #hello::after {
-        top: 720px;
+        top: 70%;
     }
 
     .intro_detail_container.info .intro__inner {
@@ -1033,12 +1047,6 @@ section#about_me {
         line-height: 20px;
     }
 
-    .skill {
-        height: 60px;
-        width: 60px;
-        font-size: 13px;
-    }
-
     .project {
         width: 100%;
     }
@@ -1058,13 +1066,13 @@ section#about_me {
     }
 
     #hello::after {
-        top: 520px;
+        top: 70%;
         width: 40px;
         height: 150px;
     }
 
     /* 소개 */
-    .section_tit {
+    .section_tit { 
         font-size: 32px;
     }
 
@@ -1140,10 +1148,11 @@ section#about_me {
         line-height: 20px;
     }
 
-    .skill {
+    .resume__data.skill,
+    .resume__data.tool {
+        font-size: 13px;
         height: 60px;
         width: 60px;
-        font-size: 13px;
     }
 
     .project {
@@ -1260,7 +1269,8 @@ margin-bottom: 10px;} */
         margin-bottom: 15px;
     }
 
-    .resume__data.skill:nth-child(2n) {
+    .resume__data.skill:nth-child(2n),
+    .resume__data.tool:nth-child(2n) {
         margin-right: 0;
     }
 
@@ -1283,6 +1293,38 @@ margin-bottom: 10px;} */
     .contact_info p {
         text-align-last: left;
     } */
+
+
+}
+
+@media all and (max-width:375px) {
+
+    #hello .section_tit {
+        font-size: 25px;
+    }
+
+    .page_titl_wrap::before,
+    .page_titl_wrap::after {
+        width: 13%;
+    }
+
+    .overview__intro,
+    .naming__intro.overview__intro {
+        font-size: 18px;
+    }
+
+    .circle__name {
+        font-size: 14px;
+    }
+
+    ..typo__boxs {
+        margin-bottom: 50px;
+    }
+
+    .typo__box.eng .font,
+    .typo__box.kr .font {
+        font-size: 16px;
+    }
 
 
 }

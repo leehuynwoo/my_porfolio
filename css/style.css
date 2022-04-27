@@ -64,8 +64,7 @@ button {
 .wrap {
     box-sizing: border-box;
     position: relative;
-    transform: translateX(-50%);
-    left: 50%;
+    margin: 0 auto;
     background: var(--color-bg-gr);
     width: 100%;
     max-width: 1920px;
@@ -130,7 +129,7 @@ section#about_me {
     width: 60px;
     height: 170px;
     position: absolute;
-    content: url(/img/mouse_down.svg);
+    content: url(../img/mouse_down.svg);
     animation: float 4s ease-in-out infinite;
 }
 
@@ -293,7 +292,7 @@ section#about_me {
     width: 100px;
     position: absolute;
     bottom: -50px;
-    content: url("/img/tag.svg");
+    content: url("../img/tag.svg");
     z-index: -1;
 }
 
@@ -527,8 +526,6 @@ section#about_me {
     max-height: 621px;
     margin-bottom: 50px;
 }
-
-.overview__img::after {}
 
 .overview__img>img {
     display: block;
@@ -836,9 +833,7 @@ section#about_me {
 
 /* 푸터 */
 #footer.section {
-    position: relative;
-    transform: translateX(-50%);
-    left: 50%;
+    margin: 0 auto;
     width: 100%;
     max-width: 1920px;
     padding-top: 40px;
@@ -867,15 +862,6 @@ section#about_me {
     font-size: 20px;
     justify-content: space-evenly;
     margin-bottom: 40px;
-}
-
-.contact_info p:not(:last-child):after {
-    position: absolute;
-    content: '';
-    right: -50%;
-    width: 1px;
-    height: 100%;
-    background-color: var(--color-text);
 }
 
 
@@ -969,7 +955,7 @@ section#about_me {
         margin-bottom: 30px !important;
     }
 
-    .footer_ineer {
+    .footer_ineer .section_tit {
         padding: 0 40px;
     }
 
@@ -1072,7 +1058,7 @@ section#about_me {
     }
 
     /* 소개 */
-    .section_tit { 
+    .section_tit {
         font-size: 32px;
     }
 

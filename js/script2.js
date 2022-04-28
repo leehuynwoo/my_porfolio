@@ -70,8 +70,6 @@ $(document).ready(function () {
 
 });
 
-
-
 //높이 값 구하기
 //순수 100vh 높이 구하기
 const firstPageHeight = document.getElementById('hello').offsetHeight;

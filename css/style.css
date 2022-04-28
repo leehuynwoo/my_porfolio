@@ -504,11 +504,15 @@ section#about_me {
     cursor: pointer;
     font-family: var(--font-gb);
     font-size: 24px;
-    color: var(--cololr-pink);
     padding: 16px 32px;
     background-color: #3B5E46;
     border: 1px solid #3B5E46;
     border-radius: 50px;
+}
+
+.go_site a {
+    color: var(--cololr-pink);
+    text-decoration: none;
 }
 
 /* 오버뷰 */
@@ -768,9 +772,15 @@ section#about_me {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
     margin-bottom: 50px;
     position: relative;
 }
+
+.page_titl_wrap.a1 {
+    margin-top: 0;
+}
+
 
 .page_titl_container {
     color: var(--color-darkgreen);

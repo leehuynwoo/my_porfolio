@@ -70,6 +70,8 @@ $(document).ready(function () {
 
 });
 
+
+$(window).resize(
 //높이 값 구하기
 //순수 100vh 높이 구하기
 const firstPageHeight = document.getElementById('hello').offsetHeight;
@@ -82,12 +84,11 @@ const TotalHeight = aboutmeTitleHegiht + aboutmeElementHeight;
 console.log(firstPageHeight);
 console.log(TotalHeight);
 
-(function () {
-    //순수 100vh 값 보다 about me의 높이가 크다면
-    if (firstPageHeight < TotalHeight) {
-        //#about_me의 css height를 auto로 바꿔라.
-        document.getElementById('about_me').css({
-            "hegiht": "auto"
-        });
-    }
-});
+//순수 100vh 값 보다 about me의 높이가 크다면
+if (firstPageHeight < TotalHeight) {
+    //#about_me의 css height를 auto로 바꿔라.
+    $('#about_me').css({
+        "height": "auto"
+    });
+}
+)

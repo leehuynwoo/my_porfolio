@@ -126,13 +126,13 @@ section#about_me {
 }
 
 #hello::after {
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
     top: 70%;
     width: 60px;
     height: 170px;
     position: absolute;
-    content: url(../img/mouse_down.svg);
+    content: url('../img/mouse_down.svg');
     animation: float 4s ease-in-out infinite;
 }
 
@@ -156,7 +156,7 @@ section#about_me {
 }
 
 
-#hello .section_tit p {
+#hello .section_tit span {
     color: #396C47;
 }
 

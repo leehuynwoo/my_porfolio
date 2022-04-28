@@ -11,33 +11,32 @@ window.onload = function () {
             if (event.wheelDelta) {
                 delta = event.wheelDelta / 120;
                 if (window.opera) delta = -delta;
-            } 
-            else if (event.detail)
+            } else if (event.detail)
                 delta = -event.detail / 3;
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
                 if ($(elmSelecter).next() != undefined) {
-                    try{
+                    try {
                         moveTop = $(elmSelecter).next().offset().top;
-                    }catch(e){}
+                    } catch (e) {}
                 }
-            // 마우스휠을 아래에서 위로
+                // 마우스휠을 아래에서 위로
             } else {
                 if ($(elmSelecter).prev() != undefined) {
-                    try{
+                    try {
                         moveTop = $(elmSelecter).prev().offset().top;
-                    }catch(e){}
+                    } catch (e) {}
                 }
             }
-             
+
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800, complete: function () {
-                }
+                duration: 800,
+                complete: function () {}
             });
         });
     });
@@ -50,8 +49,8 @@ $(document).ready(function () {
         let fontEng1 = $('.typo__box.eng .font_example:first-child');
         let fontEng2 = $('.typo__box.eng .font_example:last-child');
         let pageMenu = $('.page_descriptions__list li');
-        let overViewText= $('.overview__box.explain .overview__intro');
-        let namingConcept=$('.naming__intro .overview__intro')
+        let overViewText = $('.overview__box.explain .overview__intro');
+        let namingConcept = $('.naming__intro .overview__intro');
         let windowSize = $(window).width();
         if (windowSize <= 480) {
             fontKR.text("가나다라마바사아자");
@@ -69,4 +68,26 @@ $(document).ready(function () {
     checkWidth();
     $(window).resize(checkWidth);
 
+});
+
+//높이 값 구하기
+//순수 100vh 높이 구하기
+const firstPageHeight = document.getElementById('hello').offsetHeight;
+//어바웃미 각각 요소 높이 구하기
+const aboutmeTitleHegiht = document.querySelector('#about_me .section_tit').offsetHeight;
+const aboutmeElementHeight = document.querySelector('.intro').offsetHeight;
+//어바웃미 요소들의 전체 높이구하기 
+const TotalHeight = aboutmeTitleHegiht + aboutmeElementHeight;
+
+console.log(firstPageHeight);
+console.log(TotalHeight);
+
+(function () {
+    //순수 100vh 값 보다 about me의 높이가 크다면
+    if (firstPageHeight < TotalHeight) {
+        //#about_me의 css height를 auto로 바꿔라.
+        document.getElementById('about_me').css({
+            "hegiht": "auto"
+        });
+    }
 });

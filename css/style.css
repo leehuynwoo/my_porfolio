@@ -110,10 +110,13 @@ button {
 }
 
 /* 인트로 섹션 */
-section#hello,
+section#hello {
+    height: 100vh;
+}
+
 section#about_me {
     height: 100vh;
-    max-height: 1080px;
+
 }
 
 #hello {
@@ -124,7 +127,7 @@ section#about_me {
 
 #hello::after {
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     top: 70%;
     width: 60px;
     height: 170px;
@@ -975,12 +978,12 @@ section#about_me {
 
 }
 
-/* 테블릿 세로 (해상도 768px ~ 1023px)*/
-@media all and (min-width:768px) and (max-width:1023px) {
+/* 테블릿 세로 (해상도 768px ~ 1024px)*/
+@media all and (min-width:768px) and (max-width:1024px) {
 
     /* 어바웃미 */
     section#about_me {
-        height: auto;
+        /* height: auto; */
     }
 
     .speach_box {
@@ -998,7 +1001,7 @@ section#about_me {
     }
 
     .intro_detail_box {
-        z-index: -1;
+        z-index: 0;
         width: 100%;
         flex-direction: column;
         transform: translateY(-9%);
@@ -1103,7 +1106,7 @@ section#about_me {
     }
 
     .intro_detail_box {
-        z-index: -1;
+        z-index: 1;
         width: 100%;
         flex-direction: column;
         transform: translateY(-9%);
@@ -1225,7 +1228,7 @@ margin-bottom: 10px;} */
     }
 
     .speach {
-        margin-left: -15px;
+        margin-left: 25px;
     }
 
     .avata_wrap img {
@@ -1272,21 +1275,16 @@ margin-bottom: 10px;} */
         margin-top: 40px;
     }
 
-    /* .contact_info {
-        justify-content: flex-start !important;
-    }
-
-    .contact_info p {
-        text-align-last: left;
-    } */
-
-
 }
 
 @media all and (max-width:375px) {
 
     #hello .section_tit {
         font-size: 25px;
+    }
+
+    .speach {
+        margin-left: 10px;
     }
 
     .page_titl_wrap::before,
@@ -1303,7 +1301,7 @@ margin-bottom: 10px;} */
         font-size: 14px;
     }
 
-    ..typo__boxs {
+    .typo__boxs {
         margin-bottom: 50px;
     }
 

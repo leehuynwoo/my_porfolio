@@ -508,11 +508,13 @@ section#about_me {
     background-color: #3B5E46;
     border: 1px solid #3B5E46;
     border-radius: 50px;
+    color: var(--cololr-pink);
 }
 
-.go_site a {
-    color: var(--cololr-pink);
-    text-decoration: none;
+.more {
+    color: var(--color-darkgreen);
+    margin-bottom: 40px;
+    cursor: pointer;
 }
 
 /* 오버뷰 */

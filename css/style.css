@@ -860,8 +860,29 @@ section#about_me {
 
 .utilized__img img {
     object-fit: cover;
-    max-width: 395px;
-    height: 280px;
+    max-width: 747px;
+    height: auto;
+    margin-left: 1em;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+/* 스크롤바 설정*/
+.utilized__img::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* 스크롤바 막대 설정*/
+.utilized__img::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color: var(--color-title);
+    border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.utilized__img::-webkit-scrollbar-track {
+    background-color: var(--cololr-pink);
+    border-radius: 10px;
 }
 
 .utilized__box .utilized__skill {

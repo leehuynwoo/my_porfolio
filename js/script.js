@@ -92,3 +92,10 @@ $(window).resize( function() {
         // document.getElementById('about_me').style.height = "auto"
     }
 })
+
+$(document).ready(function () {
+    $('.more').click(function () {
+        $('.project__wrap').fadeToggle("slow", "linear");
+    });
+
+});

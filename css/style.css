@@ -488,6 +488,7 @@ section#about_me {
     padding-top: 40px;
 }
 
+
 .project__intro {
     margin-top: 80px;
     margin-bottom: 50px;
@@ -498,6 +499,26 @@ section#about_me {
 
 .np__box {
     font-size: 32px;
+    position: relative;
+}
+
+.np__box::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: -35px;
+    border-radius: 50%;
+    background-color: var(--color-title);
+}
+
+.np__box::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    top: -31px;
+    background-color: var(--color-title);
 }
 
 .go_site {
@@ -516,6 +537,13 @@ section#about_me {
     margin-bottom: 40px;
     cursor: pointer;
 }
+
+.project__wrap {
+    display: none;
+}
+
+
+
 
 /* 오버뷰 */
 .overview {
@@ -908,7 +936,7 @@ section#about_me {
     }
 
     .go_site {
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 22px;
     }
 
@@ -1281,10 +1309,6 @@ margin-bottom: 10px;} */
 
     .intro_detail_box {
         transform: translateY(-5%);
-    }
-
-    .project__intro {
-        margin-top: 40px;
     }
 
 }

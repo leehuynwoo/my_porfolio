@@ -29,6 +29,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500;700&display=swap');
 
+/* 노토산스KR*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
 /* 공통 */
 :root {
     --color-bg: #F0EEE8;
@@ -870,7 +873,9 @@ section#about_me {
 /* 스크롤바 설정*/
 .utilized__img::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
+
 
 /* 스크롤바 막대 설정*/
 .utilized__img::-webkit-scrollbar-thumb {
@@ -879,8 +884,10 @@ section#about_me {
     border-radius: 10px;
 }
 
+
 /* 스크롤바 뒷 배경 설정*/
 .utilized__img::-webkit-scrollbar-track {
+    height: 5px;
     background-color: var(--cololr-pink);
     border-radius: 10px;
 }

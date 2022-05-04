@@ -93,9 +93,17 @@ $(window).resize( function() {
     }
 })
 
+// 자세히보기
 $(document).ready(function () {
-    $('.more').click(function () {
-        $('.project__wrap').fadeToggle("slow", "linear");
+
+    $('.more.a1').click(function () {
+        $('.project__wrap.a1').fadeToggle("slow", "linear");
+    });
+    $('.more.a2').click(function () {
+        $('.project__wrap.a2').fadeToggle("slow", "linear");
+    });
+    $('.more.a3').click(function () {
+        $('.project__wrap.a3').fadeToggle("slow", "linear");
     });
 
 });

@@ -71,6 +71,7 @@ $(document).ready(function () {
 });
 
 
+
 //높이 값 구하기
 //순수 100vh 높이 구하기
 const firstPageHeight = document.getElementById('hello').offsetHeight;
@@ -92,12 +93,13 @@ $(window).resize( function() {
     }
 })
 
+// 자세히보기
 $(document).ready(function () {
-    
-    $('.more.a1').click(function () {
-        $('.project__wrap.a1').fadeToggle("slow", "linear");
-    });
 
+    $('.more').click(function() {
+        $(this).next().fadeToggle("slow", "linear");
+    })
+    
 });
 
 //img drag and scroll 

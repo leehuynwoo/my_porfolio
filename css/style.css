@@ -536,6 +536,8 @@ section#about_me {
     color: var(--cololr-pink);
 }
 
+.used__skills {font-size: 22px; color: var(--color-darkgreen);}
+
 .more {
     color: var(--color-darkgreen);
     margin-bottom: 40px;

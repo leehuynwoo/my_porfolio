@@ -173,6 +173,8 @@ section#about_me {
 .background_figures {
     position: relative;
     width: 100%;
+    z-index: 0;
+    display: none;
 }
 
 .background_figures>div {
@@ -322,7 +324,6 @@ section#about_me {
     font-size: 20px;
     position: relative;
     transform: translateY(-20%);
-    z-index: 0;
     display: flex;
     margin: 0 auto;
     flex: 1;
@@ -871,11 +872,8 @@ section#about_me {
 /* 스크롤바 설정*/
 .utilized__img::-webkit-scrollbar {
     width: 5px;
-<<<<<<< HEAD
-    height: 10px;
-=======
     height: 5px;
->>>>>>> c87c3730d52c6002aeb25d32a27df44d7ad9863f
+
 }
 
 
@@ -889,11 +887,7 @@ section#about_me {
 
 /* 스크롤바 뒷 배경 설정*/
 .utilized__img::-webkit-scrollbar-track {
-<<<<<<< HEAD
-    height: 10px;
-=======
     height: 5px;
->>>>>>> c87c3730d52c6002aeb25d32a27df44d7ad9863f
     background-color: var(--cololr-pink);
     border-radius: 10px;
 }
@@ -1075,7 +1069,6 @@ section#about_me {
     }
 
     .intro_detail_box {
-        z-index: 0;
         width: 100%;
         flex-direction: column;
         transform: translateY(-9%);
@@ -1180,7 +1173,6 @@ section#about_me {
     }
 
     .intro_detail_box {
-        z-index: 1;
         width: 100%;
         flex-direction: column;
         transform: translateY(-9%);

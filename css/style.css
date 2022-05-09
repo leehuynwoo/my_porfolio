@@ -318,6 +318,10 @@ section#about_me {
     height: 250px;
 }
 
+.avata__talk {
+    z-index: 1;
+}
+
 /* 인트로 박스 */
 .intro_detail_box {
     width: 1200px;
@@ -327,6 +331,8 @@ section#about_me {
     display: flex;
     margin: 0 auto;
     flex: 1;
+    /* 수정 */
+    z-index: -1;
 }
 
 .intro_detail_box .intro_detail_container {

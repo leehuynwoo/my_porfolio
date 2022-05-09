@@ -52,9 +52,7 @@ $(document).ready(function () {
     let fontEng1 = $(".typo__box.eng .font_example:first-child");
     let fontEng2 = $(".typo__box.eng .font_example:last-child");
     let pageMenu = $(".page_descriptions__list li");
-    let overViewText = $(
-      ".project__wrap.a1 .overview__box.explain .overview__intro"
-    );
+    let overViewText = $(".project__wrap.a1 .overview__box.explain .overview__intro");
     let namingConcept = $(".naming__intro .overview__intro");
     let windowSize = $(window).width();
     if (windowSize <= 480) {
